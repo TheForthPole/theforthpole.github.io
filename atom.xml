@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://theforthpole.github.io</id>
     <title>Gridea</title>
-    <updated>2021-03-19T14:59:35.087Z</updated>
+    <updated>2021-03-19T15:09:19.394Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://theforthpole.github.io"/>
     <link rel="self" href="https://theforthpole.github.io/atom.xml"/>
@@ -10,4 +10,128 @@
     <logo>https://theforthpole.github.io/images/avatar.png</logo>
     <icon>https://theforthpole.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[[HEOI2015]最短不公共子串]]></title>
+        <id>https://theforthpole.github.io/post/heoi2015zui-duan-bu-gong-gong-zi-chuan/</id>
+        <link href="https://theforthpole.github.io/post/heoi2015zui-duan-bu-gong-gong-zi-chuan/">
+        </link>
+        <updated>2021-03-19T14:59:55.000Z</updated>
+        <content type="html"><![CDATA[<p>给两个小写字母串 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span></span></span></span>，请你计算：<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的一个最短的子串，它不是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的子串。<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.</mn></mrow><annotation encoding="application/x-tex">2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的一个最短的子串，它不是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的子序列。<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3.</mn></mrow><annotation encoding="application/x-tex">3.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">.</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的一个最短的子序列，它不是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的子串。<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4.</mn></mrow><annotation encoding="application/x-tex">4.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">.</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的一个最短的子序列，它不是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的子序列。<br>
+串长不超过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2000</mn></mrow><annotation encoding="application/x-tex">2000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span>。</p>
+<hr>
+<p>对于前两问，我们可以先枚举 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的子串的开头位置，接下来在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的后缀自动机/序列自动机上沿着转移边走，走不动时所走的长度就是以这个位置开头能匹配的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的最长子串。<br>
+对于后两问，注意到自动机的性质：如果当前确定了在哪个状态，那么剩下的能走的步数是与前面如何到达这个状态无关的。因此贪心地走最短路到达这个状态即可。因此考虑广搜，设 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">f[i][j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span>表示到达 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的自动机的状态 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 并且到达 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的自动机的状态 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span> 的最少步数。每次枚举 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 的转移边，如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span> 也有这条转移，则放入队列中；否则就与 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 失配，直接输出当前的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">f+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 即可。</p>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define rg register
+#define il inline
+#define cn const
+#define gc getchar()
+#define fp(i,a,b) for(rg int i=(a),ed=(b);i&lt;=ed;++i)
+#define fb(i,a,b) for(rg int i=(a),ed=(b);i&gt;=ed;--i)
+#define go(u) for(rg int i=head[u];~i;i=e[i].nxt)
+using namespace std;
+typedef cn int cint;
+typedef long long LL;
+il void rd(int &amp;x){
+    x = 0;
+	rg int f(1); rg char c(gc);
+	while(c&lt;'0'||'9'&lt;c){if(c=='-')f=-1;c=gc;}
+	while('0'&lt;=c&amp;&amp;c&lt;='9')x=(x&lt;&lt;1)+(x&lt;&lt;3)+(c^48),c=gc;
+	x*=f;
+}
+cint maxn = 2010, inf = 0x3f3f3f3f;
+int n, m, ans, f[maxn&lt;&lt;1][maxn];
+char a[maxn], b[maxn];
+
+struct SAM{
+	int ch[maxn&lt;&lt;1][26], len[maxn&lt;&lt;1], fa[maxn&lt;&lt;1], lst, siz;
+	SAM(){lst = siz = 1;}
+	il void ins(cint &amp;c, int p){
+		len[++siz] = p, p = lst, lst = siz;
+		for(; p &amp;&amp; !ch[p][c]; p = fa[p])ch[p][c] = lst;
+		if(!p)return fa[lst] = 1, void();
+		rg int q = ch[p][c];
+		if(len[q] == len[p]+1)return fa[lst] = q, void();
+		len[++siz] = len[p]+1, fa[siz] = fa[q], fa[q] = fa[lst] = siz;
+		fp(i, 0, 25)ch[siz][i] = ch[q][i];
+		for(; p &amp;&amp; ch[p][c] == q; p = fa[p])ch[p][c] = siz;
+	}
+}sam;
+
+struct Sam{
+	int ch[maxn][26], len;
+	il void build(char *s){
+		len = strlen(s+1);
+		fb(i, len, 1){
+			fp(j, 0, 25)ch[i-1][j] = ch[i][j];
+			ch[i-1][s[i]-'a'] = i;
+		}
+	}
+}s1, s2;
+
+struct edge{int to, ch, nxt;}e[maxn*3];
+int head[maxn&lt;&lt;1], k;
+il void add(cint &amp;u, cint &amp;v, cint &amp;w){e[k] = (edge){v, w, head[u]}, head[u] = k++;}
+
+struct node{int x, y;};
+queue&lt;node&gt; q;
+
+int main(){
+	scanf(&quot;%s\n%s&quot;, a+1, b+1), n = strlen(a+1), m = strlen(b+1);
+	fp(i, 1, m)sam.ins(b[i]-'a', i);
+	s1.build(a), s2.build(b);
+	
+	ans = inf;
+	fp(i, 1, n){
+		int len = 0, nw = 1;
+		while(nw &amp;&amp; len &lt;= n-i+1)nw = sam.ch[nw][a[i+len]-'a'], ++len;
+		if(len &lt;= n-i+1)ans = min(ans, len);
+	}
+	printf(&quot;%d\n&quot;, ans == inf ? -1 : ans);
+	
+	ans = inf;
+	fp(i, 1, n){
+		int len = 0, nw = 0, fl = 0;
+		while((nw || !fl) &amp;&amp; len &lt;= n-i+1)fl = 1, nw = s2.ch[nw][a[i+len]-'a'], ++len;
+		if(len &lt;= n-i+1)ans = min(ans, len);
+	}
+	printf(&quot;%d\n&quot;, ans == inf ? -1 : ans);
+	
+	ans = inf, memset(f, -1, sizeof f), f[0][1] = 0, q.push((node){0, 1});
+	while(q.size()){
+		rg int x = q.front().x, y = q.front().y, nxt1, nxt2;
+		q.pop();
+		fp(i, 0, 25)if(nxt1 = s1.ch[x][i]){
+			if(nxt2 = sam.ch[y][i]){
+				if(~f[nxt1][nxt2])continue;
+				f[nxt1][nxt2] = f[x][y]+1, q.push((node){nxt1, nxt2});
+			}else{ans = f[x][y]+1; break;}
+		}
+		if(ans &lt; inf)break;
+	}
+	printf(&quot;%d\n&quot;, ans == inf ? -1 : ans);
+	
+	while(q.size())q.pop();
+	ans = inf, memset(f, -1, sizeof f), f[0][0] = 0, q.push((node){0, 0});
+	while(q.size()){
+		rg int x = q.front().x, y = q.front().y, nxt1, nxt2;
+		q.pop();
+		fp(i, 0, 25)if(nxt1 = s1.ch[x][i]){
+			if(nxt2 = s2.ch[y][i]){
+				if(~f[nxt1][nxt2])continue;
+				f[nxt1][nxt2] = f[x][y]+1, q.push((node){nxt1, nxt2});
+			}else{ans = f[x][y]+1; break;}
+		}
+		if(ans &lt; inf)break;
+	}
+	printf(&quot;%d\n&quot;, ans == inf ? -1 : ans);
+	return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
 </feed>
