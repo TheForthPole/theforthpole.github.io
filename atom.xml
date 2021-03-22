@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://theforthpole.github.io</id>
     <title>Gridea</title>
-    <updated>2021-03-22T11:00:11.015Z</updated>
+    <updated>2021-03-22T13:42:09.934Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://theforthpole.github.io"/>
     <link rel="self" href="https://theforthpole.github.io/atom.xml"/>
@@ -10,6 +10,126 @@
     <logo>https://theforthpole.github.io/images/avatar.png</logo>
     <icon>https://theforthpole.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[[SCOI2012]喵星球上的点名]]></title>
+        <id>https://theforthpole.github.io/post/scoi2012miao-xing-qiu-shang-de-dian-ming/</id>
+        <link href="https://theforthpole.github.io/post/scoi2012miao-xing-qiu-shang-de-dian-ming/">
+        </link>
+        <updated>2021-03-22T13:26:55.000Z</updated>
+        <content type="html"><![CDATA[<p>有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 只喵，每只喵有一个名和一个姓（两个字符串）。<br>
+还有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span> 次点名（也是一个字符串），如果一只喵的名或姓中包含这个字符串，这只喵就会喊“到”。<br>
+有两问 :<br>
+对于每次点名询问有多少只喵喊“到”。<br>
+对于每一只喵问询她喊了多少次“到”。<br>
+字符集 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∣</mi><mi mathvariant="normal">Σ</mi><mi mathvariant="normal">∣</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">|\Sigma| \leq 10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord">Σ</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>  , 总字符串长不超过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">2 \times 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>  。</p>
+<hr>
+<p>我们可以把每只猫的名字连起来，但是在名和姓中间加以个不会出现的字符（比如 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span> ），这样就可以不用把两个字符串分开考虑了。<br>
+如果询问串在同一个名字串中出现多次算多次的话，这题就是很板的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>AC</mtext></mrow><annotation encoding="application/x-tex">\text{AC}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">AC</span></span></span></span></span> 自动机题。具体来说就是给询问串建一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>AC</mtext></mrow><annotation encoding="application/x-tex">\text{AC}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">AC</span></span></span></span></span> 自动机，并给每个询问串的结束节点的权值都加 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> ，然后拿名字串在上面跑，每往后跑一个字符就求一下在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>fail</mtext></mrow><annotation encoding="application/x-tex">\text{fail}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">fail</span></span></span></span></span> 树上当前点到根节点的路径的权值和。第二问就解决了。第一问只需要对每个节点再维护一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>sum</mtext></mrow><annotation encoding="application/x-tex">\text{sum}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord">sum</span></span></span></span></span> ，在拿名字串跑的过程中，每到一个点就将当前点到根节点的路径上的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>sum</mtext></mrow><annotation encoding="application/x-tex">\text{sum}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord">sum</span></span></span></span></span> 都加 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> ，最后求一下每个询问串的结束节点的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>sum</mtext></mrow><annotation encoding="application/x-tex">\text{sum}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord text"><span class="mord">sum</span></span></span></span></span> 值即可。<br>
+但问题是出现多次只算一次。也就是说需要减掉算重的地方。考虑拿名字串跑的过程中，把所有遍历到的点按照 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>fail</mtext></mrow><annotation encoding="application/x-tex">\text{fail}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">fail</span></span></span></span></span> 树的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>dfn</mtext></mrow><annotation encoding="application/x-tex">\text{dfn}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">dfn</span></span></span></span></span> 值排序，那么对于相邻两个点，如果像刚才那样算就会将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>LCA</mtext></mrow><annotation encoding="application/x-tex">\text{LCA}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">LCA</span></span></span></span></span> 到根的路径多算一次。此时我们将它减掉即可。然后对于第二问，我们也类似地做。<br>
+那么时间复杂度就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>n</mi><mo>(</mo><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">Σ</mi><mi mathvariant="normal">∣</mi><mo>+</mo><mi>log</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O} (n(\log |\Sigma| + \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">∣</span><span class="mord">Σ</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>。</p>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define rg register
+#define il inline
+#define cn const
+#define gc getchar()
+#define fp(i,a,b) for(rg int i=(a),ed=(b);i&lt;=ed;++i)
+#define fb(i,a,b) for(rg int i=(a),ed=(b);i&gt;=ed;--i)
+#define go(u) for(rg int i=head[u];~i;i=e[i].nxt)
+#define fi first
+#define se second
+using namespace std;
+typedef cn int cint;
+typedef long long LL;
+il void rd(int &amp;x){
+    x = 0;
+	rg int f(1); rg char c(gc);
+	while(c&lt;'0'||'9'&lt;c){if(c=='-')f=-1;c=gc;}
+	while('0'&lt;=c&amp;&amp;c&lt;='9')x=(x&lt;&lt;1)+(x&lt;&lt;3)+(c^48),c=gc;
+	x*=f;
+}
+cint maxn = 200010;
+int n, m, len[maxn], len2, ans[maxn];
+int ary[maxn], *s[maxn], s2[maxn], pos[maxn];
+il bool cmp(cint &amp;x, cint &amp;y);
+struct AC{
+	int siz, val[maxn], fail[maxn], fa[maxn][18], dfn[maxn], tot;
+	int tmp[maxn], sum[maxn], dep[maxn];
+	map&lt;int, int&gt; ch[maxn];
+	queue&lt;int&gt; q;
+	struct edge{int to, nxt;}e[maxn];
+	int head[maxn], k;
+	il void add(cint &amp;u, cint &amp;v){e[k] = (edge){v, head[u]}, head[u] = k++;}
+	il void ins(int *s, cint &amp;n, cint &amp;id){
+		rg int nw = 0;
+		fp(i, 1, n){
+			if(!ch[nw][s[i]])ch[nw][s[i]] = ++siz;
+			nw = ch[nw][s[i]];
+		}
+		++val[nw], pos[id] = nw;
+	}
+	il int getnxt(int u, cint &amp;c){
+		while(u &amp;&amp; !ch[u][c])u = fail[u];
+		return ch[u][c];
+	}
+	il void build(){
+		memset(head, -1, sizeof head);
+		for(auto &amp;x : ch[0])q.push(x.se);
+		while(q.size()){
+			rg int u = q.front();
+			q.pop();
+			for(auto &amp;x : ch[u])fail[x.se] = getnxt(fail[u], x.fi), q.push(x.se);
+		}
+		fp(i, 1, siz)add(fail[i], i);
+	}
+	void dfs(int u){
+		dfn[u] = ++tot;
+		fp(i, 1, 17)fa[u][i] = fa[fa[u][i-1]][i-1];
+		go(u)dep[e[i].to] = dep[u]+1, fa[e[i].to][0] = u, val[e[i].to] += val[u], dfs(e[i].to);
+	}
+	il int getlca(int u, int v){
+		if(dep[u] &gt; dep[v])u ^= v ^= u ^= v;
+		fb(i, 17, 0)if(dep[fa[v][i]] &gt;= dep[u])v = fa[v][i];
+		if(u == v)return u;
+		fb(i, 17, 0)if(fa[u][i]^fa[v][i])u = fa[u][i], v = fa[v][i];
+		return fa[u][0];
+	}
+	il int slv(int *s, cint &amp;len){
+		rg int nw = 0, ans = 0;
+		fp(i, 1, len)nw = getnxt(nw, s[i]), tmp[i] = nw;
+		sort(tmp+1, tmp+1+len, cmp), ans = val[tmp[1]], ++sum[tmp[1]];
+		fp(i, 2, len){
+			rg int lca = getlca(tmp[i-1], tmp[i]);
+			ans += val[tmp[i]]-val[lca], ++sum[tmp[i]], --sum[lca];
+		}
+		return ans;
+	}
+	void calc(int u){go(u)calc(e[i].to), sum[u] += sum[e[i].to];}
+}ac;
+il bool cmp(cint &amp;x, cint &amp;y){return ac.dfn[x] &lt; ac.dfn[y];}
+int main(){
+	rd(n), rd(m), s[1] = &amp;ary[0];
+	fp(i, 1, n){
+		rg int l1, l2;
+		rd(l1); fp(j, 1, l1)rd(s[i][j]);
+		s[i][l1+1] = -1;
+		rd(l2); fp(j, 1, l2)rd(s[i][l1+1+j]);
+		len[i] = l1+l2+1, s[i+1] = s[i]+len[i];
+	}
+	fp(i, 1, m){
+		rd(len2);
+		fp(j, 1, len2)rd(s2[j]);
+		ac.ins(s2, len2, i);
+	}
+	ac.build(), ac.dfs(0);
+	fp(i, 1, n)ans[i] = ac.slv(s[i], len[i]);
+	ac.calc(0);
+	fp(i, 1, m)printf(&quot;%d\n&quot;, ac.sum[pos[i]]);
+	fp(i, 1, n)printf(&quot;%d &quot;, ans[i]);
+	return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[NOI2016] 优秀的拆分]]></title>
         <id>https://theforthpole.github.io/post/noi2016-you-xiu-de-chai-fen/</id>
