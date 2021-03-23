@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>[USACO06DEC]Milk Patterns G | Gridea</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
+<link rel="shortcut icon" href="https://theforthpole.github.io/favicon.ico?v=1616506656949">
+<link rel="stylesheet" href="https://theforthpole.github.io/styles/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="给定一个长度为 nnn 的串，字符集大小为 10610^6106 。要求求出最长的出现次数不小于 kkk 的子串的长度。 n,k≤20000n,k \leq 20000n,k≤20000 。
+
+考虑建出串的 SAM\text{SAM}SAM..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://theforthpole.github.io">
+        <img src="https://theforthpole.github.io/images/avatar.png?v=1616506656949" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://theforthpole.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">[USACO06DEC]Milk Patterns G</h2>
+            <div class="post-date">2021-03-23</div>
+            
+            <div class="post-content" v-pre>
+              <p>给定一个长度为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 的串，字符集大小为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span> 。要求求出最长的出现次数不小于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> 的子串的长度。 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>k</mi><mo>≤</mo><mn>20000</mn></mrow><annotation encoding="application/x-tex">n,k \leq 20000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 。</p>
+<hr>
+<p>考虑建出串的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>SAM</mtext></mrow><annotation encoding="application/x-tex">\text{SAM}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">SAM</span></span></span></span></span> 。那么自动机上每个节点就对应了若干个子串。这时只需要取最长的一个计算答案即可，因为它们的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>endpos</mtext></mrow><annotation encoding="application/x-tex">\text{endpos}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">endpos</span></span></span></span></span> 集合一定是相同的，也就是说出现次数也是相同的。那么只需要求出每个状态的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>endpos</mtext></mrow><annotation encoding="application/x-tex">\text{endpos}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">endpos</span></span></span></span></span> 集合大小（也就是这个状态的子串的出现次数）即可。<br>
+求出现次数就考虑在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>parent</mtext></mrow><annotation encoding="application/x-tex">\text{parent}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">parent</span></span></span></span></span> 树上转移。初始化时令每个不是由复制产生的节点的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> 等于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> ，然后 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>dfs</mtext></mrow><annotation encoding="application/x-tex">\text{dfs}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">dfs</span></span></span></span></span> 一遍 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>parent</mtext></mrow><annotation encoding="application/x-tex">\text{parent}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">parent</span></span></span></span></span> 树求个子树和即可。时间复杂度 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="script">O</mi><mo>(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">Σ</mi><mi mathvariant="normal">∣</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathcal{O} (n\log |\Sigma|)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.02778em;">O</span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">∣</span><span class="mord">Σ</span><span class="mord">∣</span><span class="mclose">)</span></span></span></span>。</p>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define rg register
+#define il inline
+#define cn const
+#define gc getchar()
+#define fp(i,a,b) for(rg int i=(a),ed=(b);i&lt;=ed;++i)
+#define go(u) for(rg int i = head[u]; ~i; i = e[i].nxt)
+#define fi first
+#define se second
+using namespace std;
+typedef cn int cint;
+typedef long long LL;
+il void rd(int &amp;x){
+    x = 0;
+	rg int f(1); rg char c(gc);
+	while(c&lt;'0'||'9'&lt;c){if(c=='-')f=-1;c=gc;}
+	while('0'&lt;=c&amp;&amp;c&lt;='9')x=(x&lt;&lt;1)+(x&lt;&lt;3)+(c^48),c=gc;
+	x*=f;
+}
+cint maxn = 40010;
+int n, k, a[maxn], len[maxn], f[maxn], fa[maxn], siz = 1, lst = 1, ans;
+map&lt;int, int&gt; ch[maxn];
+struct edge{int to, nxt;}e[maxn*3];
+int head[maxn], E;
+il void add(cint &amp;u, cint &amp;v){e[E] = (edge){v, head[u]}, head[u] = E++;}
+il void ins(cint &amp;c, int p){
+	len[++siz] = p, p = lst, lst = siz, f[siz] = 1;
+	for(; p &amp;&amp; !ch[p][c]; p = fa[p])ch[p][c] = lst;
+	if(!p)return fa[lst] = 1, void();
+	rg int q = ch[p][c];
+	if(len[q] == len[p]+1)return fa[lst] = q, void();
+	fa[++siz] = fa[q], len[siz] = len[p]+1, fa[q] = fa[lst] = siz, ch[siz] = ch[q];
+	for(; p &amp;&amp; ch[p][c] == q; p = fa[p])ch[p][c] = siz;
+}
+void dfs(int u){go(u)dfs(e[i].to), f[u] += f[e[i].to];}
+int main(){
+	rd(n), rd(k), memset(head, -1, sizeof head);
+	fp(i, 1, n)rd(a[i]), ins(a[i], i);
+	fp(i, 2, siz)add(fa[i], i);
+	dfs(1);
+	fp(i, 1, siz)if(f[i] &gt;= k)ans = max(ans, len[i]);
+	printf(&quot;%d\n&quot;, ans);
+	return 0;
+}
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://theforthpole.github.io/post/sdoi2008sandy-de-qia-pian/">
+                  <h3 class="post-title">
+                    [SDOI2008]Sandy的卡片
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
