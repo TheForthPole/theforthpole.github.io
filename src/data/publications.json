@@ -1,0 +1,44 @@
+[
+  {
+    "id": "peng2026-discrete",
+    "title": "Efficient Multi-Unimodular Waveform Design With Good Correlation Properties Over Arbitrary Discrete Phases",
+    "venue": "EUSIPCO",
+    "year": 2026,
+    "pages": "2376–2380",
+    "url": "https://eurasip.org/Proceedings/Eusipco/Eusipco2026/pdfs/0002376.pdf",
+    "label": "Proceedings PDF",
+    "authors": [
+      "Tianxu Peng",
+      "Yongzhe Li",
+      "Ran Tao"
+    ]
+  },
+  {
+    "id": "peng2026-embedding",
+    "title": "Unimodular Waveform Design With Low Correlation Level and Flexible Phase-Adjusted Information Embedding for Joint Radar-Communications",
+    "venue": "EUSIPCO",
+    "year": 2026,
+    "pages": "2311–2315",
+    "url": "https://eurasip.org/Proceedings/Eusipco/Eusipco2026/pdfs/0002311.pdf",
+    "label": "Proceedings PDF",
+    "authors": [
+      "Tianxu Peng",
+      "Yongzhe Li",
+      "Ran Tao"
+    ]
+  },
+  {
+    "id": "peng2026-phase",
+    "title": "Phase Optimization Driven Waveform Design With Good Correlation and Information Embedding Performances for Joint Radar-Communications",
+    "venue": "IEEE ICASSP",
+    "year": 2026,
+    "pages": "20961–20965",
+    "url": "https://ieeexplore.ieee.org/document/11464237",
+    "label": "IEEE Xplore",
+    "authors": [
+      "Tianxu Peng",
+      "Yongzhe Li",
+      "Ran Tao"
+    ]
+  }
+]

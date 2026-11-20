@@ -1,0 +1,27 @@
+---
+import '../site.css';
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="frame">
+    <a class="name" href="/">Tianxu Peng</a>
+    <nav aria-label="Main navigation">
+      <a href="/research/" aria-current={Astro.url.pathname === '/research/' ? 'page' : undefined}>Research</a>
+      <a href="/publications/" aria-current={Astro.url.pathname === '/publications/' ? 'page' : undefined}>Publications</a>
+    </nav>
+  </header>
+  <main class="frame" id="main"><slot /></main>
+  <footer class="frame"><a href="https://github.com/TheForthPole">GitHub</a></footer>
+</body>
+</html>

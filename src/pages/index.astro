@@ -1,0 +1,18 @@
+---
+import Site from '../layouts/Site.astro';
+import papers from '../data/publications.json';
+---
+<Site title="Tianxu Peng" description="Research and publications by Tianxu Peng on waveform design for joint radar and communications.">
+  <section class="intro" aria-labelledby="name">
+    <h1 id="name">Tianxu Peng</h1>
+    <p>I study waveform design for joint radar and communications, with a focus on phase optimization, correlation properties, and information embedding.</p>
+    <a href="/research/">Research interests →</a>
+  </section>
+  <section aria-labelledby="papers">
+    <h2 id="papers">Selected publications</h2>
+    <ul class="papers">
+      {papers.map((paper) => <li><a class="paper-title" href={paper.url}>{paper.title}</a><p>{paper.venue} {paper.year}</p></li>)}
+    </ul>
+    <a href="/publications/">Full publication list →</a>
+  </section>
+</Site>

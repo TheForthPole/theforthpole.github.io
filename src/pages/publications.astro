@@ -1,0 +1,22 @@
+---
+import Site from '../layouts/Site.astro';
+import papers from '../data/publications.json';
+---
+<Site title="Publications | Tianxu Peng" description="Published papers by Tianxu Peng.">
+  <h1>Publications</h1>
+  {[...new Set(papers.map(({ year }) => year))].sort((a, b) => b - a).map(year => (
+    <section aria-labelledby={'year-' + year}>
+      <h2 id={'year-' + year}>{year}</h2>
+      <ul class="papers">
+        {papers.filter(paper => paper.year === year).map(paper => (
+          <li id={paper.id}>
+            <h3>{paper.title}</h3>
+            <p>{paper.authors.join(', ')}</p>
+            <p>{paper.venue}, pp. {paper.pages}</p>
+            <a href={paper.url} aria-label={paper.label + ': ' + paper.title}>{paper.label} ↗</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Site>
